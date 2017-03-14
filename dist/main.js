@@ -34,7 +34,10 @@ var Geocode = function () {
                 address: address
             });
 
-            return (0, _requestPromise2.default)(this.url + '?' + query);
+            return (0, _requestPromise2.default)({
+                url: this.url + '?' + query,
+                json: true
+            });
         }
     }]);
 

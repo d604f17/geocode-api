@@ -13,6 +13,9 @@ export default class Geocode {
             address: address
         });
 
-        return rp(this.url + '?' + query);
+        return rp({
+            url: this.url + '?' + query,
+            json: true
+        });
     }
 }
